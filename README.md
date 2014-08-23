@@ -24,8 +24,11 @@ NPM Modules to install
 
 install modules using following commands on *nix system:
 npm install express
+
 npm install log4js
+
 npm install mongo
+
 npm install mongoose
 npm install socket.io
 npm install cookie
