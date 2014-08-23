@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	
+	<script type="text/javascript" src="/js/site.js" ></script> 
+<title>My Web Application</title>
+</head>
+
+<body data-ws="http://192.168.13.131:8080" class="body">
+
+<div class="container" id="page">
+
+	<div id="content">
+		<div id="loading">
+			<span>Loading...</span>
+		</div>
+		
+		<div id="loginform" class="hide"> 
+			<span class="message hide"></span>
+			<form action="" method="get"> 
+				<p>Please enter your name to continue:</p> 
+				<label for="name">Name:</label> 
+				<input type="text" name="name" id="name" /> 
+				<br />
+				<label for="name">Password:</label> 
+				<input type="password" name="password" id="password" /> 
+				<br />
+				<input type="submit" name="enter" id="enter" value="Enter" /> 
+			</form> 
+		</div> 
+		
+		<div id="wrapper" class="hide">  
+			<div id="menu" style="">  
+				<p class="welcome currentUser"></p>
+				<p class="logout"><a id="exit" href="#">Exit Chat</a></p>				
+				<div class="clear"></div>
+				<div class="users">
+					
+				</div>
+				
+			</div>
+			
+			<div class="chatContainer hide">
+				<div id="chatbox">
+					
+				</div>
+				
+				<div class="msgWindow">
+					To <span class="recieverUser">aakash</span>:<br />
+					<input name="usermsg" type="text" id="usermsg" size="63" placeholder="Send message" />  
+					<input name="submitmsg" type="submit"  id="submitmsg" value="Send" />  
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+
+	
+	</div><!-- content -->
+
+	
+<div class="holders hide">
+	<div class="user"><span class="name"></span><div class='pendingMessage hide'>(<span class="pending">0</span>)</div><div class="clear"></div></div>
+	
+	<div class="msg"><span class="sender"></span>: <span class="message"></span><div class="clear"></div></div>
+	
+	<div class="userChatContainer"><div class="userChats"></div><div class="clear"></div></div>
+</div>
+
+</div><!-- page -->
+
+</body>
+</html>
